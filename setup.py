@@ -1,4 +1,5 @@
-from distutils.core import setup
+#from distutils.core import setup
+from setuptools import setup
 
 with open('README.rst', 'r') as fh:  txt = fh.read()
 with open('LICENSE.txt', 'r') as fh:  lic = fh.read()
@@ -7,7 +8,8 @@ with open('tbgxmlutils/readme.py', 'w') as fh: fh.write(script)
 
 setup(
   name='TBGXMLUtils',
-  version='0.1.1',
+  install_requires=['lxml>=3.4.0', 'xmltodict>=0.9.0'],
+  version='0.1.2',
   author='Marc Schwarzschild',
   author_email='ms@TheBrookhavenGroup.com',
   url='http://github.com/Schwarzschild/TBGXMLUtils',
@@ -15,6 +17,4 @@ setup(
   description='Easy XML utility.',
   keywords=['xml'],
   packages=['tbgxmlutils',],
-  install_requires = ['lxml>=3.4.0', 'elementtree>=1.2.7-20070827-preview',
-                      'xmltodict>=0.9.0'],
 )
