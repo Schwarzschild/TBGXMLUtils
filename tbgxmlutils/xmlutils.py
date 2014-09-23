@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from xml.dom import minidom
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 import xmltodict
 
 def add(k, parent=None, txt=None, attrs=None):
