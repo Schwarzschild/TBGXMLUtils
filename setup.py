@@ -9,7 +9,7 @@ with open('tbgxmlutils/readme.py', 'w') as fh: fh.write(script)
 setup(
   name='TBGXMLUtils',
   install_requires=['lxml>=3.4.0', 'xmltodict>=0.9.0'],
-  version='0.1.2',
+  version='0.1.3',
   author='Marc Schwarzschild',
   author_email='ms@TheBrookhavenGroup.com',
   url='http://github.com/Schwarzschild/TBGXMLUtils',
