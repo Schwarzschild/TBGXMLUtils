@@ -19,12 +19,12 @@ def add(k, parent=None, txt=None, attrs=None):
 def etree2xml(e, encoding='UTF-8'): 
   return ET.tostring(e, encoding=encoding) if encoding else ET.tostring(e)
 
-def pretty(xml=None, fn=None):
+def pretty(xml=None, fn=None, encoding=None):
   if fn is not None:
     xml = minidom.parse(fn)
   elif not isinstance(xml, minidom.Document):
     xml = minidom.parseString(xml)
-  return xml.toprettyxml(indent='  ')
+  return xml.toprettyxml(indent='  ', encoding=encoding)
 
 def xml_fn_to_json(fn):
   fh = open(fn, 'r')
